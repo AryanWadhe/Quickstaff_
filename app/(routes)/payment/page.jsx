@@ -18,7 +18,7 @@
 //         description: "Test Transaction",
 //         image:
 //           "https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg",
-//         order_id: "order_O5VNrpmPTqYHyu",
+//         order_id: "order_O5VzabcXngo6C5",
 //         handler: function (response) {
 //           alert(response.razorpay_payment_id);
 //           alert(response.razorpay_order_id);
@@ -184,7 +184,6 @@
 
 "use client";
 
-
 import React, { useEffect } from "react";
 
 const MakePayment = () => {
@@ -271,69 +270,72 @@ const MakePayment = () => {
                   <span className=" text-[#0B72E7]">Just Ease!</span>
                 </h3>
                 <ul class="space-y-2">
-                <li class="font-mullish flex items-center space-x-2">
-                  <div class="flex flex-row space-x-5">
-                    <img
-                      class="max-w-4 object-contain"
-                      src="/checkmark.png"
-                      alt=""
-                    />
-                    <span>100+ Home Services</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex flex-row space-x-5">
-                    <img
-                      class="max-w-4 object-contain"
-                      src="/checkmark.png"
-                      alt=""
-                    />
-                    <span>Solution for all your problems</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex flex-row space-x-5">
-                    <img
-                      class="max-w-4 object-contain"
-                      src="/checkmark.png"
-                      alt=""
-                    />
-                    <span>Superior Customer Experience</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex flex-row space-x-5">
-                    <img
-                      class="max-w-4 object-contain"
-                      src="/checkmark.png"
-                      alt=""
-                    />
-                    <span>Easy to Use</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex flex-row space-x-5">
-                    <img
-                      class="max-w-4 object-contain"
-                      src="/checkmark.png"
-                      alt=""
-                    />
-                    <span>Instant Bookings</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex flex-row space-x-5">
-                    <img
-                      class="max-w-4 object-contain"
-                      src="/checkmark.png"
-                      alt=""
-                    />
-                    <span>Lowest Service Charge</span>
-                  </div>
-                </li>
+                  <li class="font-mullish flex items-center space-x-2">
+                    <div class="flex flex-row space-x-5">
+                      <img
+                        class="max-w-4 object-contain"
+                        src="/checkmark.png"
+                        alt=""
+                      />
+                      <span>100+ Home Services</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flex flex-row space-x-5">
+                      <img
+                        class="max-w-4 object-contain"
+                        src="/checkmark.png"
+                        alt=""
+                      />
+                      <span>Solution for all your problems</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flex flex-row space-x-5">
+                      <img
+                        class="max-w-4 object-contain"
+                        src="/checkmark.png"
+                        alt=""
+                      />
+                      <span>Superior Customer Experience</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flex flex-row space-x-5">
+                      <img
+                        class="max-w-4 object-contain"
+                        src="/checkmark.png"
+                        alt=""
+                      />
+                      <span>Easy to Use</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flex flex-row space-x-5">
+                      <img
+                        class="max-w-4 object-contain"
+                        src="/checkmark.png"
+                        alt=""
+                      />
+                      <span>Instant Bookings</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flex flex-row space-x-5">
+                      <img
+                        class="max-w-4 object-contain"
+                        src="/checkmark.png"
+                        alt=""
+                      />
+                      <span>Lowest Service Charge</span>
+                    </div>
+                  </li>
                 </ul>
                 <div className="flex flex-col-reverse md:flex-row w-full items-center space-x-4">
-                  <button id="rzp-button1" className="relative bg-[#0B72E7] flex items-center md:justify-start place-content-center text-white  py-[14px] px-[18px] md:pr-[90px] rounded-md font-mullish font-bold hover:bg-[#4471b6] transition-all duration-200 self-stretch md:w-fit">
+                  <button
+                    id="rzp-button1"
+                    className="relative bg-[#0B72E7] flex items-center md:justify-start place-content-center text-white  py-[14px] px-[18px] md:pr-[90px] rounded-md font-mullish font-bold hover:bg-[#4471b6] transition-all duration-200 self-stretch md:w-fit"
+                  >
                     Click here to Make Payment
                     <div className="w-12 h-[60px] bg-greenLight absolute right-6 skew-x-[20deg] flex justify-center items-center">
                       <svg

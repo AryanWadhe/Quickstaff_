@@ -60,19 +60,24 @@ function BookingHistoryList({ bookingHistory, type }) {
               </h2>
               <h2 className="flex gap-2 text-gray-500">
                 <Calendar className="text-primary" />
-                Service on : <span className="text-black"> {booking?.date}</span>
+                Service on :{" "}
+                <span className="text-black"> {booking?.date}</span>
               </h2>
               <h2 className="flex gap-2 text-gray-500">
                 <Clock className="text-primary" />
-                Service on : <span className="text-black"> {booking?.time}</span>
+                Service on :{" "}
+                <span className="text-black"> {booking?.time}</span>
               </h2>
             </div>
           </div>
 
           <AlertDialog>
             <AlertDialogTrigger asChild>
-              <Button variant="outline" className="mt-5 w-full border-red-300 ">
-                Cancel Appointment
+              <Button
+                variant="outline" text-white
+                className="mt-5 w-full text-white font-bold hover:bg-red-600 bg-red-700 "
+              >
+                Abort Service        
               </Button>
             </AlertDialogTrigger>
             <AlertDialogContent>

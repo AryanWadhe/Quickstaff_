@@ -23,6 +23,7 @@ function BusinessInfo({business}) {
       <h2 className='flex gap-2 text-lg text-gray-500'>
         <Mail/>
         {business?.email}</h2>
+        <h1>hello</h1>
       </div>
       <div className='flex flex-col gap-5 items-end'>
         <Button><Share/></Button>

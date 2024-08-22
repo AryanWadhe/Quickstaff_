@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import GlobalApi from "@/app/_services/GlobalApi";
-import { uploadToCloudinary } from "@/lib/utils";
+// import { uploadToCloudinary } from "@/lib/utils";
 
 const AddYourBusiness = () => {
   const [formData, setFormData] = useState({
@@ -26,31 +26,31 @@ const AddYourBusiness = () => {
     const localFilePath = URL.createObjectURL(files[0]); // Get local file path
     setFormData({ ...formData, [name]: localFilePath });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const {
-    //   name,
-    //   email,
-    //   phoneNumber,
-    //   address,
-    //   service,
-    //   aboutYou,
-    //   profilePhoto,
-    //   aadharFile,
-    //   servicePhoto,
-    // } = formData;
+    const {
+      name,
+      email,
+      phoneNumber,
+      address,
+      service,
+      aboutYou,
+      profilePhoto,
+      aadharFile,
+      servicePhoto,
+    } = formData;
+
     try {
       // Once the files are uploaded to the server, you can then upload them to Cloudinary
-      const profilePhotoUrl = await uploadToCloudinary(formData.profilePhoto)
-        .url;
-      const aadharFileUrl = await uploadToCloudinary(formData.aadharFile).url;
-      const servicePhotoUrl = await uploadToCloudinary(formData.servicePhoto)
-        .url;
+      // const profilePhotoUrl = await uploadToCloudinary(formData.profilePhoto).url;
+      // const aadharFileUrl = await uploadToCloudinary(formData.aadharFile).url;
+      // const servicePhotoUrl = await uploadToCloudinary(formData.servicePhoto).url;
 
-      console.log("Files uploaded successfully:", profilePhotoUrl);
-      console.log("Files uploaded successfully:", aadharFileUrl);
-      console.log("Files uploaded successfully:", servicePhotoUrl);
-      console.log("Form data :", formData);
+      // console.log("Files uploaded successfully:", profilePhotoUrl);
+      // console.log("Files uploaded successfully:", aadharFileUrl);
+      // console.log("Files uploaded successfully:", servicePhotoUrl);
+      // console.log("Form data :", formData);
       GlobalApi.createServiceProvider(formData);
     } catch (error) {
       console.error("Error uploading files:", error);
