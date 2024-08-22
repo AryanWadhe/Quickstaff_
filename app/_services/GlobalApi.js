@@ -76,9 +76,20 @@ const getBusinessByCategory = async (category) => {
         }
       }
       `;
-  const result = await request(MASTER_URL, query);
-  return result;
-};
+ try {
+        const result = await request(MASTER_URL, query);
+        return result;
+      } catch (error) {
+        if (error.response.status === 429) {
+          console.error("Rate limit exceeded. Retrying in 30 seconds...");
+          await new Promise(resolve => setTimeout(resolve, 30000)); // Wait 30 seconds
+          return getBusinessByCategory(); // Retry the request
+        } else {
+          console.error("An error occurred:", error);
+          throw error; // Re-throw the error if it's not a rate limit issue
+        }
+      }
+    };
 
 const getBusinessById = async (id) => {
   const query =
